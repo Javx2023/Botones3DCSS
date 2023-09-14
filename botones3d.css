@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root{
+    --bg: #2e2e2e;
+    --c1: #d6d6d6;
+    --c2: #bebebe;
+    --c3: #818181;
+    --c4: #5f5f5f;
+    --font: 'Oswald', sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    background: var(--bg);
+    font-family: var(--font);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul {
+    display: block;
+}
+li{
+    list-style: none;
+    margin: 20px;
+}
+.bx{
+    font-size: 3rem;
+    padding: 1rem;
+}
+a{
+    text-decoration: none;
+    color: var(--c1);
+    background: var(--c3);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-30deg) skew(25deg);
+    box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.5);
+    transition: 300ms ease-in-out;
+}
+a::before, a::after {
+    content: '';
+    position: absolute;
+    transition: 300ms ease-in-out;
+}
+a::before{
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: var(--c2);
+    transform: rotate(0deg) skewY(-45deg);
+}
+a::after{
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: var(--c4);
+    transform: rotate(0deg) skewX(-45deg);
+}
+a:hover{
+    transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
+    box-shadow: -24px 24px 32px rgba(0, 0, 0, 0.5);
+}
+/* Colores a los btn */
+/*Whatsapp */
+li:hover:nth-child(1) a{
+    background-color: #098019;
+}
+li:hover:nth-child(1) a::before{
+    background-color: #275e2e;
+}
+li:hover:nth-child(1) a::after{
+    background-color: #06490f;
+}
+/*Telegram */
+li:hover:nth-child(2) a{
+    background-color: #0c96c0;
+}
+li:hover:nth-child(2) a::before{
+    background-color: #27515e;
+}
+li:hover:nth-child(2) a::after{
+    background-color: #063c49;
+}
+/*Facebook */
+li:hover:nth-child(3) a{
+    background-color: #0c45c0;
+}
+li:hover:nth-child(3) a::before{
+    background-color: #273f5e;
+}
+li:hover:nth-child(3) a::after{
+    background-color: #062949;
+}
